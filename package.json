@@ -1,0 +1,12 @@
+{
+  "name": "waniangtuan-miniprogram-customer",
+  "version": "1.0.0",
+  "scripts": {
+    "compile": "node ./node_modules/typescript/lib/tsc.js",
+    "dev": "node ./node_modules/typescript/lib/tsc.js --watch",
+    "page": "node ./cli/create-page.js"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.3333"
+  }
+}

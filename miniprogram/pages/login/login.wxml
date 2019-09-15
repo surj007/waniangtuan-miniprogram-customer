@@ -1,0 +1,6 @@
+<!--login.wxml-->
+<view>
+  <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+    授权登录
+  </button>
+</view>

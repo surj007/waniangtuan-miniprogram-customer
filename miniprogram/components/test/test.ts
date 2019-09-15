@@ -1,0 +1,6 @@
+//test.ts
+Component({
+  data: {
+    
+  }
+})

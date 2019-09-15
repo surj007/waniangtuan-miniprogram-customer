@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "target": "ES5",
+    "module": "CommonJS",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "removeComments": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "inlineSourceMap": true,
+    "pretty": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "strictPropertyInitialization": true,
+    "typeRoots": [
+      "typings"
+    ],
+    "lib": [
+      "es2015",
+      "dom"
+    ]
+  },
+  "include": [
+    "./miniprogram/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "miniprogram_dist",
+    "**/*.spec.ts",
+    "./miniprogram/node_modules",
+    "./miniprogram/miniprogram_npm",
+  ]
+}

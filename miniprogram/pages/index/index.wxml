@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+  <van-button bind:click="getTest">like</van-button>
+  <test />
+</view>
