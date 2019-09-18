@@ -6,7 +6,7 @@ const pagePath = path.join(__dirname, '../miniprogram/pages/' + pageName);
 
 try {
   if (fs.existsSync(pagePath)) {
-    console.log('page exist');
+    console.error('page exist');
 
     return;
   }
@@ -19,5 +19,5 @@ try {
   fs.writeFileSync(path.join(pagePath, pageName + '.wxss'), `/**${pageName}.wxss**/`);
 } 
 catch (err) {
-  console.log(err);
+  console.error(err);
 }

@@ -1,8 +1,8 @@
 import { AppInterface } from '../interfaces/app.interface';
 
-const app = getApp<AppInterface>();
+import { loginApi } from '../api/auth.api';
 
-import { loginApi } from '../api/login.api';
+const app = getApp<AppInterface>();
 
 export function commonLoginService() {
   wx.login({
@@ -11,11 +11,12 @@ export function commonLoginService() {
         withCredentials: true,
         success(getUserInfoResult) {
           loginApi({
-            code: loginResult.code,
+            loginCode: loginResult.code,
             encryptedData: getUserInfoResult.encryptedData,
             userInfo: getUserInfoResult.userInfo,
             signature: getUserInfoResult.signature,
             iv: getUserInfoResult.iv,
+            rawData: getUserInfoResult.rawData,
             locationInfo: app.globalData.locationInfo
           }).then((data) => {
             wx.setStorage({

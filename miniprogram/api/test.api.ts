@@ -1,12 +1,12 @@
-import { TestRequsetDataInterface } from '../interfaces/test.interface';
+import { TestRequsetDataInterface, TestResponseDataInterface } from '../interfaces/test.interface';
 import { commonHttp } from '../utils/request.util';
 
-export function testApi(): Promise<string> {
-  return commonHttp<TestRequsetDataInterface, string>({
+export function testApi(): Promise<TestResponseDataInterface> {
+  return commonHttp<TestRequsetDataInterface, TestResponseDataInterface>({
     url: '/test',
     method: 'GET',
     data: {
-      name: 1
+      name: 'srj'
     }
-  }, String);
+  });
 }

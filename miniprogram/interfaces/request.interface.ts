@@ -1,5 +1,5 @@
 export interface RequestHeaderInterface {
-  cookie?: string;
+  Cookie?: string;
 }
 
 export interface LoginResponeHeaderInterface<U> {
@@ -16,5 +16,5 @@ export interface RequestConfigInterface<T> {
 export interface ResponseDataInterface<T> {
   readonly code: number;
   readonly msg: string;
-  data: T;
+  readonly data: T;
 }

@@ -1,3 +1,8 @@
 export interface TestRequsetDataInterface {
-  readonly name: number;
+  readonly name: string;
+}
+
+export interface TestResponseDataInterface {
+  readonly name: string;
+  readonly age: number;
 }
