@@ -3,7 +3,7 @@ export interface RequestHeaderInterface {
 }
 
 export interface LoginResponeHeaderInterface<U> {
-  readonly 'set-cookie': U;
+  readonly 'Set-Cookie': U;
 }
 
 export interface RequestConfigInterface<T> {

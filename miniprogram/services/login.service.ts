@@ -22,6 +22,9 @@ export function commonLoginService() {
             wx.setStorage({
               key: 'token',
               data,
+              success() {
+                wx.navigateBack({ delta: 1 });
+              },
               fail(err) {
                 console.debug('[srj][login.service.ts][wx.setStorage]fail: ', err);
               }

@@ -33,7 +33,7 @@ export function commonHttp<
           success(res) {
             if (res.statusCode === 200 && (<ResponseDataInterface<U>>(res.data)).code === 0) {
               if (requestConfig.url === '/auth/login') {
-                resolve((<LoginResponeHeaderInterface<U>>(res.header))['set-cookie']);
+                resolve((<LoginResponeHeaderInterface<U>>(res.header))['Set-Cookie']);
               }
               else {
                 resolve((<ResponseDataInterface<U>>(res.data)).data);

@@ -28,7 +28,7 @@ function commonHttp(requestConfig) {
                 wx.request(__assign(__assign({}, requestConfig), { url: constants_util_1.BASE_URL + requestConfig.url, success: function (res) {
                         if (res.statusCode === 200 && (res.data).code === 0) {
                             if (requestConfig.url === '/auth/login') {
-                                resolve((res.header)['set-cookie']);
+                                resolve((res.header)['Set-Cookie']);
                             }
                             else {
                                 resolve((res.data).data);
