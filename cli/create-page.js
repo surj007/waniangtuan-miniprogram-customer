@@ -18,6 +18,6 @@ try {
   fs.writeFileSync(path.join(pagePath, pageName + '.wxml'), `<!--${pageName}.wxml-->`);
   fs.writeFileSync(path.join(pagePath, pageName + '.wxss'), `/**${pageName}.wxss**/`);
 } 
-catch (err) {
+catch(err) {
   console.error(err);
 }

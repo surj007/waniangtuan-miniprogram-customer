@@ -37,4 +37,4 @@ App<AppInterface>({
     token: '',
     locationInfo: <wx.GetLocationSuccessCallbackResult>{}
   }
-})
+});

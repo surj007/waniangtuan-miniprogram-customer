@@ -1,6 +1,7 @@
 function formatNumber(n: number): string {
-  const str = n.toString()
-  return str[1] ? str : '0' + str
+  const str = n.toString();
+  
+  return str[1] ? str : '0' + str;
 }
 
 export function formatTime(date: Date): string {

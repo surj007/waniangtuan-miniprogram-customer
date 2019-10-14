@@ -2,11 +2,13 @@
   "name": "waniangtuan-miniprogram-customer",
   "version": "1.0.0",
   "scripts": {
-    "compile": "node ./node_modules/typescript/lib/tsc.js",
-    "dev": "node ./node_modules/typescript/lib/tsc.js --watch",
+    "compile:prod": "cross-env NODE_ENV=prod node ./cli/set-env.js && node ./node_modules/typescript/lib/tsc.js",
+    "compile:pre-test": "cross-env NODE_ENV=pre-test node ./cli/set-env.js && node ./node_modules/typescript/lib/tsc.js",
+    "dev": "cross-env NODE_ENV=dev node ./cli/set-env.js && node ./node_modules/typescript/lib/tsc.js --watch",
     "page": "node ./cli/create-page.js"
   },
   "devDependencies": {
+    "cross-env": "^6.0.3",
     "typescript": "^3.3.3333"
   }
 }
